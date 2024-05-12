@@ -5,9 +5,9 @@ client = OpenAI(api_key="sk-964bcad67d9d44e19e66d667b793825d", base_url="https:/
 # startdate, enddate, time, theme,
 def main(theme, list, time, date):
 
-    date = f"学习计划的起止日期是{date}。"
-    dailytime = f"每天的有效学习时间大约是{time}。"
-    lessontheme = f"学习的课程名称是{theme}。"
+    date = f"学习计划的起止日期：{date}。"
+    dailytime = f"每天的有效学习时间大约：{time}。"
+    lessontheme = f"学习的课程名称：{theme}。"
     lit = f"课程的目录：{list}。"
 
     response = client.chat.completions.create(
