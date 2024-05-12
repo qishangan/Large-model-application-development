@@ -5,7 +5,7 @@ from utils import main
 # 设置页面配置
 st.set_page_config(page_title="学习计划生成", layout="wide")
 
-# 加载公司logo（梦织者）
+# 加载公司logo
 logo = Image.open("logo.png")
 
 
