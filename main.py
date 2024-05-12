@@ -8,17 +8,6 @@ st.set_page_config(page_title="学习计划生成", layout="wide")
 # 加载公司logo
 logo = Image.open("logo.png")
 
-# 自定义CSS来调整侧边栏宽度
-st.markdown(
-    """
-    <style>
-    .css-1d391kg {
-        width: 33%;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
 
 # 创建侧边栏并添加内容
 st.sidebar.image(logo, use_column_width=True)
@@ -31,16 +20,16 @@ st.sidebar.write("邮箱: 2307456103@qq.com")
 # 应用的主要部分
 st.title("📆学习计划生成")
 
-theme = st.text_input("📖输入需要学习的主题")
-startdate = st.text_input("📄输入学习计划的开始日期")
-enddate = st.text_input("📃输入学习计划的结束日期")
-time = st.text_input("🕒输入每天最佳的学习时间")
+theme = st.text_input("📖输入需要学习的课程名称")
+date = st.text_input("📄输入学习计划的起止日期（例如：从一月一号到十二月一号）")
+time = st.text_input("🕒输入每天有效的学习的时间")
+list = st.text_input("请输入课程目录")
 
 submit = st.button("🔥生成计划")
 
 if submit:
-    with st.spinner("🚀学习计划正在生成中，请稍等..."):
-        result = main(startdate, enddate, time, theme)
+    with st.spinner("🚀学习计划正在生成中，请稍等...（大概两分钟左右）"):
+        result = main(theme, list, time, date)
     st.success("学习计划已生成！")
     st.subheader("学习计划：")
     st.write(result)
