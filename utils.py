@@ -26,7 +26,7 @@ def main(theme, list, time, date):
                                             注意：最后输出完学习计划的表格后，可以说一些激励用户学习的话，帮助用户更有斗志地执行计划"""},
             {"role": "user", "content": lessontheme + dailytime + date + lit},
       ],
-        max_tokens=29000,
+        max_tokens=4096,
         temperature=0.7,
         stream=False
     )
