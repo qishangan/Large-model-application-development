@@ -25,7 +25,7 @@ if 'show_tutorial' not in st.session_state:
     st.session_state.show_tutorial = False
 
 # 在标题旁边添加按钮切换显示教程图片
-tutorial_image = Image.open("tutorial.png")  # 加载教程图片
+tutorial_image = Image.open("Tutorials.png")  # 加载教程图片
 if st.button("📘 显示/隐藏 使用教程", key="tutorial_button"):
     st.session_state.show_tutorial = not st.session_state.show_tutorial  # 切换状态
 
