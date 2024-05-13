@@ -2,6 +2,7 @@ from openai import OpenAI
 # for backward compatibility, you can still use `https://api.deepseek.com/v1` as `base_url`.
 client = OpenAI(api_key="sk-964bcad67d9d44e19e66d667b793825d", base_url="https://api.deepseek.com")
 
+# startdate, enddate, time, theme,
 def main(theme, list, time, date):
 
     date = f"学习计划的开始日期：{date}。"
