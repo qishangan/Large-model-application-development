@@ -40,7 +40,7 @@ list = st.text_input("🌟请输入课程信息")
 submit = st.button("🔥生成计划")
 
 if submit:
-    with st.spinner("🚀学习计划正在生成中，请稍等..."):
+    with st.spinner("🚀学习计划正在生成中，请稍等...（大概两分钟左右）"):
         result = main(theme, list, time, date)
     st.success("学习计划已生成！")
     st.subheader("学习计划：")
